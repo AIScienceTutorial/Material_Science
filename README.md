@@ -22,4 +22,4 @@ Do the following before you come to the tutorial:
 *  This will show you a list of the Notebooks available in the repo.
 *  Select the `introduction.ipynb` file to open and work through it.
 *  As each session of the tutorial begins, you will simply select the corresponding notebook from this list and it will create a copy for you in your Colaboratory account (all `*.ipynb` files in the Colaboratory account will be stored in your Google Drive).
-* To use a GPU, in the notbook the select `Runtime` -> `Change Runtime Type` and you have a dropbox list of hardward settings to choose from where the notebook can run.
+* To use a GPU, in the notebook, select `Runtime` -> `Change Runtime Type` and you be givena dropbox list of hardwarde settings to choose from where the notebook can run. Try them and evaluate the difference in runtimes as an exercise
