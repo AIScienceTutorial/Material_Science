@@ -61,6 +61,8 @@ from sklearn.gaussian_process.kernels import WhiteKernel, ExpSineSquared
 
 ##  Read Data  ##
 
+get_ipython().system('wget https://raw.githubusercontent.com/venkat-1/AI4Science/master/Material_Science/Charge_Transition_Levels/Data.csv')
+
 ifile  = open('Data.csv', "rt")
 #ifile  = open('Data_norm.csv', "rt")
 reader = csv.reader(ifile)
@@ -82,6 +84,9 @@ X = csvdata[:,4:]
 
 
     # Read CdX alloy data: CdTe_0.5Se_0.5 and CdSe_0.5S_0.5
+
+get_ipython().system('wget https://raw.githubusercontent.com/venkat-1/AI4Science/master/Material_Science/Charge_Transition_Levels/Outside.csv')
+
 ifile2  = open('Outside.csv', "rt")
 #ifile2  = open('Outside_norm.csv', "rt")
 reader2 = csv.reader(ifile2)
@@ -103,7 +108,10 @@ X_out = csvdata2[:,4:]
 n_out = prop_out.size
 
 
-    # Read Entire Dataset                                                                                                              
+    # Read Entire Dataset
+    
+get_ipython().system('wget https://raw.githubusercontent.com/venkat-1/AI4Science/master/Material_Science/Charge_Transition_Levels/X.csv')
+
 ifile3  = open('X.csv', "rt")
 #ifile3  = open('X_norm.csv', "rt")
 reader3 = csv.reader(ifile3)
