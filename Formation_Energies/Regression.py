@@ -61,6 +61,9 @@ from sklearn.gaussian_process.kernels import WhiteKernel, ExpSineSquared
 
 ##  Read Data  ##
 
+#!wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/Data.csv
+get_ipython().system('wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/Data_norm.csv')
+
 #ifile  = open('Data.csv', "rt")
 ifile  = open('Data_norm.csv', "rt")
 reader = csv.reader(ifile)
@@ -84,6 +87,10 @@ X = csvdata[:,6:]
 
 
     # Read CdX alloy data: CdTe_0.5Se_0.5 and CdSe_0.5S_0.5
+
+#!wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/Outside.csv
+get_ipython().system('wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/Outside_norm.csv')
+
 #ifile2  = open('Outside.csv', "rt")
 ifile2  = open('Outside_norm.csv', "rt")
 reader2 = csv.reader(ifile2)
@@ -107,7 +114,11 @@ X_out = csvdata2[:,6:]
 n_out = prop_out.size
 
 
-    # Read Entire Dataset                                                                                                              
+    # Read Entire Dataset
+
+#!wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/X.csv
+get_ipython().system('wget https://raw.githubusercontent.com/AIScienceTutorial/Material_Science/master/Formation_Energies/X_norm.csv')
+
 #ifile3  = open('X.csv', "rt")
 ifile3  = open('X_norm.csv', "rt")
 reader3 = csv.reader(ifile3)
@@ -182,13 +193,10 @@ for i in range(0,n_all):
 # We will now start training the model. We will do this at three different levels of increasing sophistication. The first, and simplest, level ML1 is using the default parameters regression model (eg Random Forest). Next level, ML2, will dig into the model and optimize inernal parameters of the model, hyperparameters, to obtain a better model. The last level, ML3, does hyperparameter optimization and cross-validation. The cross-validation is an important step to avoid or minimize overfitting of the model (think of this as fitting a high-order polynomial to a few data points). At the end, we will do a Grid Search, which is a scheme to march through a grid of hyperparameters, to find the best regression model within this set of hyperparameters.
 # 
 
-# In[ ]:
-
-
-ML1: Define random forest regressor with default parameters which fits a model to the training data and makes predictions on the test dataset. 
-
-Print out the training and test predictions as .csv or .txt files if desired.
-
+# ML1: Define random forest regressor with default parameters which fits a model to the training data and makes predictions on the test dataset. 
+# 
+# Print out the training and test predictions as .csv or .txt files if desired.
+# 
 
 # In[26]:
 
